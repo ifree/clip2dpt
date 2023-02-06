@@ -94,9 +94,10 @@ def main():
     args.add_argument('--keep_temp_file', '-k', help='keep pdf file', action='store_true', default=False)
     args.add_argument('--flip', '-f', help='flip image', action='store_true', default=False)
     args.add_argument('--grab', '-g', help='grab image from Digital Paper', action='store_true', default=False)
+    args.add_argument('--addr', help="device ip", default=None)
     args = args.parse_args()
 
-    dp = DigitalPaper()
+    dp = DigitalPaper(args.addr)
 
     found_deviceid, found_privatekey = find_auth_files()
     if not os.path.exists(found_deviceid) or not os.path.exists(found_deviceid):

@@ -1,6 +1,6 @@
 {
     "name": "clip2dpt",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Python utility to send clipboard image to DPT-RP1",
     "license": "MIT",
     "authors": [
